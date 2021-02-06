@@ -1,0 +1,13 @@
+<h3>Personagens</h3>
+
+<form method="POST" action="/characters/">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" name='createCharacter'>
+</form>
+
+{% for character in characters %}
+<div>
+    <p>{{ character}}</p>
+</div>
+{% endfor %}
